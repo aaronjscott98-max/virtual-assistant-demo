@@ -1,6 +1,3 @@
-/* =======================
-   1. CORE VARIABLES & RESET
-======================= */
 :root {
     --primary: #2563eb;
     --primary-hover: #1d4ed8;
@@ -31,9 +28,6 @@ body {
     overflow-x: hidden;
 }
 
-/* =======================
-   2. NAVIGATION
-======================= */
 .navbar {
     position: sticky;
     top: 0;
@@ -68,6 +62,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
+    padding: 0;
 }
 
 .nav-links a {
@@ -111,9 +106,6 @@ body {
     margin: 5px 0;
 }
 
-/* =======================
-   3. HERO SECTION
-======================= */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -148,9 +140,6 @@ body {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
 }
 
-/* =======================
-   4. ABOUT & TRUST BAR
-======================= */
 .trust-bar {
     background: #f1f5f9;
     padding: 2.5rem;
@@ -209,9 +198,22 @@ body {
     border-left: 5px solid var(--accent);
 }
 
-/* =======================
-   5. SERVICES & PRICING
-======================= */
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.about-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
 .section {
     padding: 6rem 10%;
     max-width: 1400px;
@@ -285,9 +287,6 @@ body {
     font-weight: 600;
 }
 
-/* =======================
-   6. CONTACT & FORMS
-======================= */
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -323,9 +322,6 @@ body {
     font-size: 1rem;
 }
 
-/* =======================
-   7. FOOTER & COOKIES
-======================= */
 footer {
     background: var(--dark);
     color: #94a3b8;
@@ -365,11 +361,10 @@ footer {
     align-items: center;
     z-index: 2000;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: 0.4s;
 }
 
-/* =======================
-   8. UTILITIES & ANIMATIONS
-======================= */
 .btn {
     padding: 14px 32px;
     border-radius: 10px;
@@ -429,18 +424,17 @@ footer {
     display: none !important;
 }
 
-/* =======================
-   9. MOBILE RESPONSIVENESS
-======================= */
-@media (max-width: 968px) {
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    /* Hide the links by default on mobile */
+@media (max-width: 968px) {
     .nav-links {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 100%;
-        /* Sits right under the navbar */
         left: 0;
         width: 100%;
         background: var(--dark);
@@ -448,9 +442,9 @@ footer {
         gap: 1.5rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
         text-align: center;
+        list-style: none;
     }
 
-    /* THIS IS THE MISSING PIECE: Show the menu when .open is added via JS */
     .nav-links.open {
         display: flex;
         animation: fadeInDown 0.3s ease forwards;
@@ -458,50 +452,30 @@ footer {
 
     .hamburger {
         display: block;
-        /* Show hamburger only on mobile */
     }
 
-    /* Optional: Smooth fade-in animation for the menu */
-@keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
+    .hero,
+    .about-container,
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    .about-list {
+        align-items: center;
     }
-}
 
-.hero,
-.about-container,
-.contact-wrapper {
-    grid-template-columns: 1fr;
-    text-align: center;
-}
+    .hero h1 {
+        font-size: 2.8rem;
+    }
 
-.hero h1 {
-    font-size: 2.8rem;
-}
+    .price-card.featured {
+        transform: scale(1);
+    }
 
-.nav-links {
-    display: none;
-}
-
-/* Handle with JS */
-.hamburger {
-    display: block;
-}
-
-.price-card.featured {
-    transform: scale(1);
-}
-
-.hero-actions {
-    justify-content: center;
-}
-
+    .hero-actions {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px) {
@@ -513,5 +487,5 @@ footer {
 
     .section {
         padding: 4rem 5%;
-    }
+    } 
 }
