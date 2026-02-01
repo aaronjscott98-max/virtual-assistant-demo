@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Assistant Demo</title>
+    <meta name="description" content="Professional virtual assistant services in Dundee. Helping local small businesses with admin, diary management, and business support.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">VA <span>Dundee</span></div>
+            <button class="hamburger" onclick="toggleMenu(this)" aria-label="Toggle Menu">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="tel:01382123456" class="nav-phone"><i class="fas fa-phone"></i> 01382 123456</a></li>
+                <li><a href="#contact" class="nav-cta">Get Started</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">Your Local Dundee Partner</span>
+            <h1>Focus on your <span class="text-gradient">growth</span>, I’ll handle the rest.</h1>
+            <p>Premium virtual assistant services for Dundee’s entrepreneurs. Let’s reclaim your time and streamline your business.</p>
+            <div class="hero-actions">
+                <button onclick="scrollToContact()" class="btn btn-primary">Book a Discovery Call</button>
+                <a href="#services" class="btn btn-secondary">Explore Services</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Professional Virtual Assistant at work">
+        </div>
+    </header>
+
+    <section class="trust-bar">
+        <div class="container">
+            <p>Expertly managing your favorite tools</p>
+            <div class="logo-grid">
+                <span><i class="fa-brands fa-slack"></i> Slack</span>
+                <span><i class="fas fa-calendar-alt"></i> Google</span>
+                <span><i class="fas fa-tasks"></i> Trello</span>
+                <span><i class="fas fa-file-invoice"></i> Xero</span>
+            </div>
+        </div>
+    </section>
+
+    <main id="main-content">
+        
+        <section class="section about" id="about">
+            <div class="about-container">
+                <div class="about-image reveal">
+                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800" alt="VA Dundee Founder">
+                    <div class="experience-badge">
+                        <strong>5+ Years</strong>
+                        <span>Experience</span>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="badge">About Me</span>
+                    <h2>Helping Tayside Businesses <span class="text-gradient">Thrive</span></h2>
+                    <p>I’m a Dundee-based Virtual Assistant dedicated to helping small business owners and freelancers reclaim their most valuable asset: <strong>Time.</strong></p>
+                    
+                    <div class="why-local card">
+                        <h4><i class="fas fa-location-dot"></i> Why Local Matters</h4>
+                        <p>Based right here in Dundee, I understand the local landscape. Whether you need a partner in the same time zone or someone who knows the local business community, I provide a personal touch national agencies can't match.</p>
+                    </div>
+
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> Reliable & GDPR Compliant</li>
+                        <li><i class="fas fa-check-circle"></i> Experts in Microsoft 365 & Google Workspace</li>
+                        <li><i class="fas fa-check-circle"></i> Flexible support tailored to your workflow</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="services">
+            <h2 class="section-title">Expert Support</h2>
+            <div class="service-grid">
+                <div class="service-card reveal">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h3>Inbox & Diary</h3>
+                    <p>Total email management and calendar coordination to keep you on track.</p>
+                </div>
+                <div class="service-card reveal">
+                    <i class="fas fa-file-invoice"></i>
+                    <h3>Lighthouse Admin</h3>
+                    <p>Precise document formatting, data entry, and business organisation.</p>
+                </div>
+                <div class="service-card reveal">
+                    <i class="fas fa-users"></i>
+                    <h3>Client Support</h3>
+                    <p>Professional onboarding and follow-ups for your valued customers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="pricing">
+            <h2 class="section-title">Investment</h2>
+            <div class="pricing-grid">
+                <div class="price-card reveal">
+                    <h3>Ad-Hoc</h3>
+                    <p class="price">£35<span>/hr</span></p>
+                    <p>Pay as you go support for one-off tasks.</p>
+                </div>
+                <div class="price-card featured reveal">
+                    <div class="popular-tag">Most Popular</div>
+                    <h3>Retainer Lite</h3>
+                    <p class="price">£320<span>/mo</span></p>
+                    <p>10 hours of dedicated monthly priority support.</p>
+                </div>
+                <div class="price-card reveal">
+                    <h3>Retainer Pro</h3>
+                    <p class="price">£600<span>/mo</span></p>
+                    <p>20 hours of comprehensive business management.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq" id="faq">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item reveal">
+                    <h4>How do we get started?</h4>
+                    <p>We start with a free discovery call. If we're a match, we sign an agreement and start within 48 hours.</p>
+                </div>
+                <div class="faq-item reveal">
+                    <h4>Is my data secure?</h4>
+                    <p>Yes. I am fully GDPR compliant and use professional password management for all client accounts.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact" id="contact">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-wrapper reveal">
+                <div class="contact-info">
+                    <h3>Let's Chat</h3>
+                    <div class="info-item"><i class="fas fa-envelope"></i> <p>hello@vadundee.co.uk</p></div>
+                    <div class="info-item"><i class="fas fa-phone-alt"></i> <p>01382 123456</p></div>
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i> <p>Dundee, Scotland</p></div>
+                    <div class="info-item"><i class="fas fa-clock"></i> <p>Mon-Fri, 9am-5pm</p></div>
+                </div>
+                <div class="contact-form-container">
+                    <form id="contactForm" class="modern-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number (Optional)">
+                        <textarea placeholder="How can I help you?" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div id="successMessage" class="form-feedback hidden">
+                        <i class="fas fa-check-circle"></i> <p>Message sent successfully!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2026 VA Dundee. Supporting businesses from Broughty Ferry to the West End.</p>
+    </footer>
+
+    <div id="cookieBanner" class="cookie-banner">
+        <p>This demo uses cookies to ensure you get the best experience.</p>
+        <div class="cookie-actions">
+            <button class="btn" onclick="acceptCookies()">Accept</button>
+            <button class="btn" style="background:#4b5563" onclick="hideBanner()">Decline</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
