@@ -28,6 +28,7 @@ body {
     overflow-x: hidden;
 }
 
+/* --- NAVIGATION --- */
 .navbar {
     position: sticky;
     top: 0;
@@ -36,6 +37,7 @@ body {
     padding: 1rem 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
 .nav-container {
@@ -104,8 +106,10 @@ body {
     height: 3px;
     background: white;
     margin: 5px 0;
+    transition: 0.3s;
 }
 
+/* --- HERO --- */
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -140,6 +144,7 @@ body {
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
 }
 
+/* --- TRUST BAR --- */
 .trust-bar {
     background: #f1f5f9;
     padding: 2.5rem;
@@ -162,6 +167,7 @@ body {
     margin-right: 8px;
 }
 
+/* --- ABOUT SECTION --- */
 .about-container {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
@@ -198,22 +204,32 @@ body {
     border-left: 5px solid var(--accent);
 }
 
+/* FIXED ABOUT LIST */
 .about-list {
-    list-style: none;
+    list-style: none !important; /* Forces bullets away */
     padding: 0;
     margin: 2rem 0;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1rem;
 }
 
 .about-list li {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: center; /* Vertically centers check with text */
+    justify-content: flex-start;
+    gap: 12px;
     font-weight: 600;
+    text-align: left;
 }
 
+.about-list i {
+    color: var(--success);
+    flex-shrink: 0; /* Prevents icon from squishing on mobile */
+    font-size: 1.1rem;
+}
+
+/* --- SECTIONS & CARDS --- */
 .section {
     padding: 6rem 10%;
     max-width: 1400px;
@@ -287,6 +303,7 @@ body {
     font-weight: 600;
 }
 
+/* --- CONTACT --- */
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -322,6 +339,7 @@ body {
     font-size: 1rem;
 }
 
+/* --- FOOTER & COOKIES --- */
 footer {
     background: var(--dark);
     color: #94a3b8;
@@ -365,6 +383,7 @@ footer {
     transition: 0.4s;
 }
 
+/* --- UTILS --- */
 .btn {
     padding: 14px 32px;
     border-radius: 10px;
@@ -429,9 +448,10 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* --- MOBILE RESPONSIVENESS --- */
 @media (max-width: 968px) {
     .nav-links {
-        display: none;
+        display: none; /* Hidden until .open is added */
         flex-direction: column;
         position: absolute;
         top: 100%;
@@ -461,8 +481,11 @@ footer {
         text-align: center;
     }
 
+    /* Centers the fix checkmark list on mobile */
     .about-list {
-        align-items: center;
+        align-items: flex-start;
+        max-width: 300px;
+        margin: 2rem auto;
     }
 
     .hero h1 {
