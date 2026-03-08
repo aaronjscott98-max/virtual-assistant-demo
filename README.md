@@ -23,7 +23,7 @@ I created this demo to show how a local business in the Dundee & Tayside area ca
 ### 💼 About Me
 I am a **Web Design & Development Graduate** based in Dundee. While I am currently taking on **freelance projects**, I am actively seeking a **permanent role** where I can contribute my design and frontend skills to a forward-thinking team.
 
-I’m a designer who actually enjoys getting stuck into the code—ensuring the final product is as functional as it is aesthetic.
+I’m a designer who actually enjoys getting stuck into the code, ensuring the final product is as functional as it is aesthetic.
 
 ### 📬 Let's Chat
 * **Portfolio:** [My Portfolio Website](https://aaronjscott.co.uk/)
