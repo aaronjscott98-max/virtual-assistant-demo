@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Assistant Demo</title>
+    <title>Virtual Assistant Demo | VA Dundee</title>
     <meta name="description" content="Professional virtual assistant services in Dundee. Helping local small businesses with admin, diary management, and business support.">
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -12,50 +12,51 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">VA <span>Dundee</span></div>
-            <button class="hamburger" onclick="toggleMenu(this)" aria-label="Toggle Menu">
-                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a href="tel:01382123456" class="nav-phone"><i class="fas fa-phone"></i> 01382 123456</a></li>
-                <li><a href="#contact" class="nav-cta">Get Started</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-content">
-            <span class="badge">Your Local Dundee Partner</span>
-            <h1>Focus on your <span class="text-gradient">growth</span>, I’ll handle the rest.</h1>
-            <p>Premium virtual assistant services for Dundee’s entrepreneurs. Let’s reclaim your time and streamline your business.</p>
-            <div class="hero-actions">
-                <button onclick="scrollToContact()" class="btn btn-primary">Book a Discovery Call</button>
-                <a href="#services" class="btn btn-secondary">Explore Services</a>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">VA <span>Dundee</span></div>
+                <button class="hamburger" onclick="toggleMenu(this)" aria-label="Toggle Menu">
+                    <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="tel:01382123456" class="nav-phone"><i class="fas fa-phone"></i> 01382 123456</a></li>
+                    <li><a href="#contact" class="nav-cta">Get Started</a></li>
+                </ul>
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Professional Virtual Assistant at work">
-        </div>
+        </nav>
+
+        <section class="hero">
+            <div class="hero-content">
+                <span class="badge">Your Local Dundee Partner</span>
+                <h1>Focus on your <span class="text-gradient">growth</span>, I’ll handle the rest.</h1>
+                <p>Premium virtual assistant services for Dundee’s entrepreneurs. Let’s reclaim your time and streamline your business.</p>
+                <div class="hero-actions">
+                    <button onclick="scrollToContact()" class="btn btn-primary">Book a Discovery Call</button>
+                    <a href="#services" class="btn btn-secondary">Explore Services</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Professional Virtual Assistant at work">
+            </div>
+        </section>
     </header>
 
-    <section class="trust-bar">
-        <div class="container">
-            <p>Expertly managing your favorite tools</p>
-            <div class="logo-grid">
-                <span><i class="fa-brands fa-slack"></i> Slack</span>
-                <span><i class="fas fa-calendar-alt"></i> Google</span>
-                <span><i class="fas fa-tasks"></i> Trello</span>
-                <span><i class="fas fa-file-invoice"></i> Xero</span>
-            </div>
-        </div>
-    </section>
-
     <main id="main-content">
+        <section class="trust-bar">
+            <div class="container">
+                <p>Expertly managing your favorite tools</p>
+                <div class="logo-grid">
+                    <span><i class="fa-brands fa-slack"></i> Slack</span>
+                    <span><i class="fas fa-calendar-alt"></i> Google</span>
+                    <span><i class="fas fa-tasks"></i> Trello</span>
+                    <span><i class="fas fa-file-invoice"></i> Xero</span>
+                </div>
+            </div>
+        </section>
         
         <section class="section about" id="about">
             <div class="about-container">
@@ -72,7 +73,7 @@
                     <p>I’m a Dundee-based Virtual Assistant dedicated to helping small business owners and freelancers reclaim their most valuable asset: <strong>Time.</strong></p>
                     
                     <div class="why-local card">
-                        <h4><i class="fas fa-location-dot"></i> Why Local Matters</h4>
+                        <h3><i class="fas fa-location-dot"></i> Why Local Matters</h3>
                         <p>Based right here in Dundee, I understand the local landscape. Whether you need a partner in the same time zone or someone who knows the local business community, I provide a personal touch national agencies can't match.</p>
                     </div>
 
@@ -132,11 +133,11 @@
             <h2 class="section-title">Frequently Asked Questions</h2>
             <div class="faq-container">
                 <div class="faq-item reveal">
-                    <h4>How do we get started?</h4>
+                    <h3>How do we get started?</h3>
                     <p>We start with a free discovery call. If we're a match, we sign an agreement and start within 48 hours.</p>
                 </div>
                 <div class="faq-item reveal">
-                    <h4>Is my data secure?</h4>
+                    <h3>Is my data secure?</h3>
                     <p>Yes. I am fully GDPR compliant and use professional password management for all client accounts.</p>
                 </div>
             </div>
@@ -154,10 +155,10 @@
                 </div>
                 <div class="contact-form-container">
                     <form id="contactForm" class="modern-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Email Address" required>
-                        <input type="tel" placeholder="Phone Number (Optional)">
-                        <textarea placeholder="How can I help you?" required></textarea>
+                        <input type="text" placeholder="Your Name" aria-label="Your Name" required>
+                        <input type="email" placeholder="Email Address" aria-label="Email Address" required>
+                        <input type="tel" placeholder="Phone Number (Optional)" aria-label="Phone Number">
+                        <textarea placeholder="How can I help you?" aria-label="Message content" required></textarea>
                         <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
                     </form>
                     <div id="successMessage" class="form-feedback hidden">
@@ -178,13 +179,13 @@
         <p>&copy; 2026 VA Dundee. Supporting businesses from Broughty Ferry to the West End.</p>
     </footer>
 
-    <div id="cookieBanner" class="cookie-banner">
+    <aside id="cookieBanner" class="cookie-banner" aria-label="Cookie Consent">
         <p>This demo uses cookies to ensure you get the best experience.</p>
         <div class="cookie-actions">
-            <button class="btn" onclick="acceptCookies()">Accept</button>
-            <button class="btn" style="background:#4b5563" onclick="hideBanner()">Decline</button>
+            <button class="btn btn-primary" onclick="acceptCookies()">Accept</button>
+            <button class="btn btn-decline" onclick="hideBanner()">Decline</button>
         </div>
-    </div>
+    </aside>
 
     <script src="js/script.js"></script>
 </body>
